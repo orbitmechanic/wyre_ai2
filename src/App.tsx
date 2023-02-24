@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { API_KEY } from './config';
 
 function App() {
   return (
@@ -18,6 +19,12 @@ function App() {
         >
           Learn React
         </a>
+        <div>
+          <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
+          <form>
+            <input type="hidden" defaultValue={API_KEY} />
+          </form>
+        </div>
       </header>
     </div>
   );
